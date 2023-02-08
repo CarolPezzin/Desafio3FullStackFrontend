@@ -1,17 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Containerdash } from "./style.module.js";
-
-
+import { Containerdash } from "./style.module";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
-// import { TechList } from "../../components/TechList/index.jsx";
-// import ModalTech from "../../components/ModalTech/index.jsx";
+import { ContactsList } from "../../components/Contacts/index";
+import ModalContacts from "../../components/FormContatos/index";
 import { useState } from "react";
-
-const Dashboard = () => {
+       
+export const Dashboard = () => {
   const { user, loading } = useAuth();
-  const [modal, setModal] = useState(false)
-
+  const [modal, setModal] = useState(false);
+ 
   const navigate = useNavigate();
 
   function logout() {
@@ -22,46 +20,23 @@ const Dashboard = () => {
   if (loading) {
     return <div>Carregando...</div>;
   }
-  // return user ? (
-  //   <Containerdash>
-  //     <header>
-  //       <img src={logo} alt="logo" />
-  //       <button type="button" onClick={logout}>
-  //         Sair
-  //       </button>
-  //     </header>
-  //     <div>
-  //       <h3>Olá, {user.name}</h3>
-  //       <p>{user.course_module}</p>
-  //     </div>
-  //     <section>
-  //       <h2>Tecnologias</h2>
-  //       <button onClick={() => setModal(true)}>+</button>
-  //     </section>
-
-  //     {/* <ModalTech modal={modal} setModal={setModal}/>
-  //     <TechList /> */}
-  //   </Containerdash>
-  // ) : (
-  //   // <Navigate to="/login" replace />
-  // );
-  return (
+  return user ? (
     <Containerdash>
       <header>
-      <h3>Olá, usuário</h3>
+        <h3>Olá, {user.name}</h3>
         <button type="button" onClick={logout}>
           Sair
         </button>
       </header>
-        
       <section>
         <h2>Contatos</h2>
         <button onClick={() => setModal(true)}>Add</button>
       </section>
 
-      {/* <ModalTech modal={modal} setModal={setModal}/>
-      <TechList /> */}
+      <ModalContacts modal={modal} setModal={setModal} />
+      <ContactsList />
     </Containerdash>
-  ) 
+  ) : (
+    <Navigate to="/" replace />
+  );
 };
-export default Dashboard

@@ -67,4 +67,4 @@ export default createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary);
   }
-`;
+`

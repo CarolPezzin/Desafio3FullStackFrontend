@@ -7,7 +7,7 @@ const App = () => {
       <>
       <AuthProvider>
         <Global />
-        <Routes />;
+        <Routes />
       </AuthProvider>
       </>
     )

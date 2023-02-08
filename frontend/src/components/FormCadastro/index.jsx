@@ -7,6 +7,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 const Form = () => {
   const { SubmitApi } = useContext(AuthContext);
+  
 
   const formSchema = yup.object().shape({
     name: yup.string().required("Campo obrigatório"),
@@ -45,8 +46,10 @@ const Form = () => {
       </label>
       {errors.isAdm?.message}
       <button type="onClick" >Cadastrar</button>
+      
       </div>
     </ContainerForm>
+    
   );
 };
 

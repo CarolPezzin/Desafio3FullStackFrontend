@@ -19,9 +19,9 @@ export const Containerdash = styled.div`
     background-color: rgb(220,220,220);
 
     h3 {
-    width: 15%;
+    width: 55%;
     padding: 1%;
-    text-align: center;
+    text-align: start;
     font-size: 24px;
     font-weight: bold;
     font-family: 'Courgette', cursive;
@@ -31,6 +31,7 @@ export const Containerdash = styled.div`
 
     button {
     width: 6.3%;
+    height: 2%;
     padding: 1%;
     font-size: 20px;
     font-family: 'Courgette', cursive;
@@ -47,36 +48,35 @@ export const Containerdash = styled.div`
 
   section {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 20%;
-    height: 100%;
     padding: 2%;
+      h2 {
+      text-decoration: underline wavy red;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Courgette', cursive;
+      
+      color: rgba(101, 101, 101, 1);
+      }
 
-    h2 {
-    text-decoration: underline wavy red;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Courgette', cursive;
-    
-    color: rgba(101, 101, 101, 1);
-    }
-
-    button {
-    width: 26%;
-    height: 4%;
-    padding: 1%;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Courgette', cursive;
-    font-weight: bold;
-    color: rgba(101, 101, 101, 1);
-    
-    border-color: rgb(219, 227, 233);
-    border-style: solid;
-    border-radius: 10%;
-    background-color: rgb(220,220,220);
-    cursor: pointer;
-    }
+      button {
+      width: 28%;
+      height: 100%;
+      padding: 1%;
+      font-size: 14px;
+      text-align: center;
+      font-family: 'Courgette', cursive;
+      font-weight: bold;
+      color: rgba(101, 101, 101, 1);
+      
+      border-color: rgb(219, 227, 233);
+      border-style: solid;
+      border-radius: 10%;
+      background-color: rgb(220,220,220);
+      cursor: pointer;
+      }
   }
 `
