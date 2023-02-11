@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
 export const ContainerUl = styled.ul`
-  background: purple;
+  background: white;
   border-radius: 4px;
-  
+  width: 20vw;
+  height: 100%;  
 
   li {
     background-color: #868e96;
 
     h4 {
-      
-      
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: 'Courgette', cursive;
+      color: #0b0b0b;      
     }
 
-    nav {
+    div {
       
 
       @media (max-width: 440px){

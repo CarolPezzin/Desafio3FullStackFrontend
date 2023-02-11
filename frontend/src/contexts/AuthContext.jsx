@@ -61,11 +61,12 @@ const AuthProvider = ({children}) => {
       api.defaults.headers.post.authorization = `Bearer ${token}`;
 
       const response = await api
+        
         .post("/users/contacts", contactsData)
         .then((response) => {
           const { data } = response;
-          const newContactsList = [...(user.contacts), data];
-          setUserContact({ ...user, contacts: newContactsList });
+          const newContactsList = [...(userContact), data];
+          setUserContact({ ...userContact, newContactsList });
         })
         .catch((error) => console.log(error.data.message));
     };

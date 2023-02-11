@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const ContainerForm = styled.section`
-  margin-top: -6%;
+  margin-top: 0%;
+  width: 25vw;
   height: 50vh;
+  margin-left: 25%;
+  
   form {
     display: flex;
     flex-direction: column;

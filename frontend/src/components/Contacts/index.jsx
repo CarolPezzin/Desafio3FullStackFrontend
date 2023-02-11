@@ -3,20 +3,20 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { ContainerUl } from "./styles";
 
 export const ContactsList = () => {
-  const { userContact, RemoveContact } = useContext(AuthContext);
-
+  const { user, RemoveContact } = useContext(AuthContext);
+  
   return (
-    <ContainerUl>
-      {userContact?.map(({id, name, email, fone }) => {
+    <ContainerUl><h1>ola</h1>
+      {user?.contacts?.map(({id, name, email, fone }) => {
         return (
           <li key={id}>
             <h4>{name}</h4>
-            <nav>
+            <div>
               <h5>{email}</h5>
               <h5>{fone}</h5>
               <button onClick={() => RemoveContact({id})}>
               </button>
-            </nav>
+            </div>
           </li>
         );
       })}

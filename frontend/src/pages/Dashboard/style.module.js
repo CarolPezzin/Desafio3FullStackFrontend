@@ -46,7 +46,7 @@ export const Containerdash = styled.div`
     }
   }
 
-  section {
+  div {
     display: flex;
     align-items: center;
     justify-content: space-between;

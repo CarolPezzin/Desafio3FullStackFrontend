@@ -28,10 +28,10 @@ export const Dashboard = () => {
           Sair
         </button>
       </header>
-      <section>
+      <div>
         <h2>Contatos</h2>
         <button onClick={() => setModal(true)}>Add</button>
-      </section>
+      </div>
 
       <ModalContacts modal={modal} setModal={setModal} />
       <ContactsList />
